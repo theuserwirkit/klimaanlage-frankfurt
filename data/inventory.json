@@ -1,0 +1,40 @@
+{
+  "minRentalDays": 4,
+  "deliveryFee": 80,
+  "currency": "EUR",
+  "lastUpdated": "2026-06-23",
+  "products": [
+    {
+      "id": "mobile-trailer",
+      "name": "Mobil-Klimaanlage auf Anhänger",
+      "shortName": "Mobil-Klimaanlage",
+      "description": "Kompakte Kühlleistung auf Kfz-Anhänger mit flexiblem Abluftschlauch — ideal für Büros, Teilbereiche in Hallen und kleinere Zelte.",
+      "image": "/images/detail.png",
+      "pricePerDay": 149,
+      "pricePerWeek": 899,
+      "coolingCapacityKw": 6.5,
+      "totalUnits": 3,
+      "availableUnits": 2,
+      "units": [
+        { "id": "trailer-1", "status": "available" },
+        { "id": "trailer-2", "status": "available" },
+        { "id": "trailer-3", "status": "rented" }
+      ]
+    },
+    {
+      "id": "spot-cooler",
+      "name": "Spotcooler",
+      "shortName": "Spotcooler",
+      "description": "Industrieller Spotcooler mit mehreren Kühlschläuchen — gezielte Kühlung einzelner Arbeitsbereiche in Hallen, auf Baustellen oder bei Events.",
+      "image": "/images/spotcooler.png",
+      "pricePerDay": 149,
+      "pricePerWeek": 899,
+      "coolingCapacityKw": 10,
+      "totalUnits": 1,
+      "availableUnits": 1,
+      "units": [
+        { "id": "spot-1", "status": "available" }
+      ]
+    }
+  ]
+}
