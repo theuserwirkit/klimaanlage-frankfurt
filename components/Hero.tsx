@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0 opacity-25">
         <Image
           src="/images/hero.png"
-          alt="Mobil-Klimaanlage auf Anhänger mit Klimaschläuchen zu einem Bürofenster in Frankfurt"
+          alt="Mobil-Klimaanlage auf Anhänger und Spotcooler zur Miete bei Frankfurt am Main"
           fill
           className="object-cover"
           priority
@@ -21,16 +21,19 @@ export default function Hero() {
         <div className="max-w-2xl">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-1.5 text-sm font-medium text-cyan-200 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-400" />
-            Mobile Klimatisierung für Unternehmen
+            Vermietung aus 61273 Wehrheim · Frankfurt &amp; Rhein-Main
           </p>
           <h1 className="text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-            <span className="text-gradient-ice">Kühle Luft</span> dort, wo Sie sie
-            brauchen — ohne Umbau
+            <span className="text-gradient-ice">Klimaanlage &amp; Spotcooler</span>{" "}
+            mieten — mobil und ohne Umbau
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-slate-300">
-            Unsere mobilen Klimaanlagen auf Kfz-Anhängern liefern kalte Luft direkt in
-            Büros, Teilbereiche in Hallen oder kleinere Zelte — nicht für komplette
-            Hallen oder große Venues. Schnell verfügbar, flexibel einsetzbar.
+            Wir vermieten zwei mobile Kühl-Lösungen aus Wehrheim bei Frankfurt: die{" "}
+            <strong className="font-semibold text-white">Mobil-Klimaanlage auf Anhänger</strong>{" "}
+            (6,5&nbsp;kW) für Büros und kleinere Bereiche sowie den{" "}
+            <strong className="font-semibold text-white">Spotcooler</strong> (10&nbsp;kW) mit
+            drei Kühlschläuchen für gezielte Bereichskühlung in Hallen, auf Baustellen und bei
+            Events. Schnell verfügbar — Lieferung in Frankfurt und das gesamte Rhein-Main-Gebiet.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
@@ -40,10 +43,10 @@ export default function Hero() {
               Unverbindlich anfragen
             </a>
             <a
-              href="#arbeitsschutz"
+              href="#geraete"
               className="rounded-xl border border-cyan-400/25 bg-white/5 px-6 py-3.5 text-center font-semibold text-cyan-100 backdrop-blur-sm transition hover:border-cyan-400/40 hover:bg-white/10"
             >
-              Arbeitsschutz & Pflichten
+              Geräte vergleichen
             </a>
           </div>
         </div>

@@ -23,7 +23,7 @@ export default function ImpressumPage() {
           <section>
             <h2 className="text-xl font-semibold text-slate-900">Angaben gemäß § 5 TMG</h2>
             <p>
-              Eventpanther GmbH
+              Wirkung live GmbH
               <br />
               Hildegard von Bingen Str. 1
               <br />
@@ -46,7 +46,7 @@ export default function ImpressumPage() {
               Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
             </h2>
             <p>
-              Eventpanther GmbH
+              Wirkung live GmbH
               <br />
               Hildegard von Bingen Str. 1
               <br />

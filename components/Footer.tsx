@@ -8,7 +8,8 @@ export default function Footer() {
               Klimaanlage <span className="text-gradient-ice">Frankfurt</span>
             </p>
             <p className="mt-2 text-sm">
-              Mobile Klimatisierung für Unternehmen und Privatkunden in Frankfurt und Umgebung.
+              Mobil-Klimaanlage auf Anhänger und Spotcooler zur Miete — Standort
+              61273 Wehrheim bei Frankfurt. Lieferung in die gesamte Rhein-Main-Region.
             </p>
           </div>
 
@@ -17,7 +18,7 @@ export default function Footer() {
               Kontakt
             </h3>
             <ul className="mt-3 space-y-2 text-sm">
-              <li>Eventpanther GmbH</li>
+              <li>Wirkung live GmbH</li>
               <li>
                 Hildegard von Bingen Str. 1
                 <br />
@@ -28,7 +29,8 @@ export default function Footer() {
                   bp@wirkung-group.de
                 </a>
               </li>
-              <li>Frankfurt am Main & Umgebung</li>
+              <li>61273 Wehrheim bei Frankfurt</li>
+              <li>Liefergebiet: Frankfurt &amp; Rhein-Main</li>
             </ul>
           </div>
 
@@ -52,7 +54,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-cyan-500/10 pt-8 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} Eventpanther GmbH · Klimaanlage Frankfurt. Alle Rechte vorbehalten.
+          © {new Date().getFullYear()} Wirkung live GmbH · Klimaanlage Frankfurt. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>

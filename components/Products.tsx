@@ -13,11 +13,12 @@ export default function Products({ inventory }: ProductsProps) {
       <div className="container-max">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="section-heading text-slate-900">
-            Unsere <span className="text-gradient-ice">Geräte</span>
+            <span className="text-gradient-ice">Klimaanlage &amp; Spotcooler</span> zur Miete
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Zwei Lösungen für unterschiedliche Einsätze — beide mobil, schnell verfügbar
-            und ohne baulichen Eingriff.
+            Beide Geräte vermieten wir ab unserem Standort in 61273 Wehrheim bei Frankfurt.
+            Wählen Sie die passende Kühlleistung für Ihren Einsatz — Lieferung in die gesamte
+            Rhein-Main-Region.
           </p>
         </div>
 

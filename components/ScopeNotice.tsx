@@ -23,10 +23,11 @@ export default function ScopeNotice({ className = "" }: ScopeNoticeProps) {
         />
       </svg>
       <p className="text-sm leading-relaxed text-amber-900">
-        <strong className="font-semibold">Achtung:</strong> Wir sprechen hier nicht von
-        Groß-Klimaanlagen für komplette Hallen oder ganze Venues. Unsere mobilen Geräte
-        (6,5 kW) sind für einzelne Räume und Bereiche bis ca. 80 m² gedacht — z.&nbsp;B.
-        Büros, Teilbereiche in Hallen oder kleinere Zelte.
+        <strong className="font-semibold">Hinweis:</strong> Unsere Mietgeräte sind kompakte
+        mobile Klimaanlagen — keine Großanlagen für komplette Hallen oder große Venues. Die{" "}
+        Mobil-Klimaanlage auf Anhänger (6,5&nbsp;kW) eignet sich für Räume bis ca. 80&nbsp;m².
+        Der Spotcooler (10&nbsp;kW) kühlt gezielt einzelne Bereiche in Hallen, auf Baustellen
+        oder bei Events.
       </p>
     </div>
   );

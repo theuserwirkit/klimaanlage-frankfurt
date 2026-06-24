@@ -8,7 +8,7 @@
       "id": "mobile-trailer",
       "name": "Mobil-Klimaanlage auf Anhänger",
       "shortName": "Mobil-Klimaanlage",
-      "description": "Kompakte Kühlleistung auf Kfz-Anhänger mit flexiblem Abluftschlauch — ideal für Büros, Teilbereiche in Hallen und kleinere Zelte.",
+      "description": "Mobile Klimaanlage auf Kfz-Anhänger mit 6,5 kW Kühlleistung und flexiblem Abluftschlauch. Zur Miete ab 61273 Wehrheim bei Frankfurt — ideal für Büros, Teilbereiche in Hallen und kleinere Zelte im Rhein-Main-Gebiet.",
       "image": "/images/detail.png",
       "pricePerDay": 149,
       "pricePerWeek": 899,
@@ -25,15 +25,21 @@
       "id": "spot-cooler",
       "name": "Spotcooler",
       "shortName": "Spotcooler",
-      "description": "Industrieller Spotcooler mit mehreren Kühlschläuchen — gezielte Kühlung einzelner Arbeitsbereiche in Hallen, auf Baustellen oder bei Events.",
+      "description": "Industrieller Spotcooler mit ca. 10 kW Kühlleistung und drei flexiblen Kühlschläuchen. Zur Miete ab Wehrheim bei Frankfurt — gezielte Bereichskühlung in Hallen, auf Baustellen und bei Events.",
       "image": "/images/spotcooler.png",
       "pricePerDay": 149,
       "pricePerWeek": 899,
       "coolingCapacityKw": 10,
-      "totalUnits": 1,
-      "availableUnits": 1,
+      "totalUnits": 7,
+      "availableUnits": 3,
       "units": [
-        { "id": "spot-1", "status": "available" }
+        { "id": "spot-1", "status": "available" },
+        { "id": "spot-2", "status": "available" },
+        { "id": "spot-3", "status": "available" },
+        { "id": "spot-4", "status": "rented" },
+        { "id": "spot-5", "status": "rented" },
+        { "id": "spot-6", "status": "rented" },
+        { "id": "spot-7", "status": "rented" }
       ]
     }
   ]

@@ -95,8 +95,8 @@ export default function Specs({ inventory }: SpecsProps) {
             <span className="text-gradient-ice">Technische Daten</span>
           </h2>
           <p className="mt-4 text-lg text-slate-300">
-            Detaillierte Spezifikationen für beide Gerätetypen — wählen Sie das passende
-            Modell für Ihren Einsatz.
+            Detaillierte Spezifikationen für Mobil-Klimaanlage auf Anhänger und Spotcooler —
+            wählen Sie das passende Mietgerät für Ihren Einsatz in Frankfurt und Umgebung.
           </p>
         </div>
 

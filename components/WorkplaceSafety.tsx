@@ -17,7 +17,7 @@ const points = [
   {
     title: "Schnelle Lösung ohne Umbau",
     description:
-      "Unsere mobile Klimaanlage ist eine pragmatische Übergangslösung: schnell geliefert, ohne bauliche Eingriffe — damit Sie Ihrer Verantwortung als Arbeitgeber nachkommen können.",
+      "Unsere mobilen Kühl-Lösungen — Anhänger-Klimaanlage oder Spotcooler — sind eine pragmatische Übergangslösung: schnell aus Wehrheim geliefert, ohne bauliche Eingriffe.",
   },
 ];
 
@@ -45,7 +45,8 @@ export default function WorkplaceSafety() {
             <p className="mt-4 text-lg leading-relaxed text-slate-300">
               Arbeitgeber müssen angemessene Temperaturen am Arbeitsplatz gewährleisten.
               Wenn die fest installierte Klimaanlage ausfällt oder die Hitze überhandnimmt,
-              bietet unsere mobile Lösung schnelle Entlastung — ohne lange Wartezeiten.
+              bieten unsere Mobil-Klimaanlage auf Anhänger und unser Spotcooler schnelle
+              Entlastung — Lieferung aus Wehrheim bei Frankfurt.
             </p>
             <a
               href="#anfrage"

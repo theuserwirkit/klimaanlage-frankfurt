@@ -36,7 +36,8 @@ export default function PricingAvailability({ inventory }: PricingAvailabilityPr
             Preise & <span className="text-gradient-ice">Verfügbarkeit</span>
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Transparente Mietpreise — Verfügbarkeit in Echtzeit aus unserem Bestand.
+            Transparente Mietpreise für Klimaanlage auf Anhänger und Spotcooler —
+            Verfügbarkeit in Echtzeit. Lieferung aus 61273 Wehrheim bei Frankfurt.
           </p>
         </div>
 
@@ -87,7 +88,7 @@ export default function PricingAvailability({ inventory }: PricingAvailabilityPr
         <div className="ice-card mx-auto mt-8 max-w-2xl p-6 text-center">
           <ul className="space-y-1 text-sm text-slate-600">
             <li>Mindestmietdauer: {inventory.minRentalDays} Tage</li>
-            <li>Lieferpauschale: {formatPrice(inventory.deliveryFee, inventory.currency)}</li>
+            <li>Lieferpauschale aus Wehrheim: {formatPrice(inventory.deliveryFee, inventory.currency)}</li>
             <li>
               Stand: {new Date(inventory.lastUpdated).toLocaleDateString("de-DE")}
             </li>

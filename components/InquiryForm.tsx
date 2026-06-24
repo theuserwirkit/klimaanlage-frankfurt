@@ -149,7 +149,8 @@ export default function InquiryForm({ inventory }: InquiryFormProps) {
             Unverbindliche <span className="text-gradient-ice">Anfrage</span>
           </h2>
           <p className="mt-4 text-lg text-slate-300">
-            Füllen Sie das Formular aus — wir erstellen Ihnen ein individuelles Angebot.
+            Wählen Sie Klimaanlage auf Anhänger oder Spotcooler — wir erstellen Ihnen ein
+            individuelles Angebot mit Lieferung aus Wehrheim bei Frankfurt.
             Mindestmietdauer: {inventory.minRentalDays} Tage.
           </p>
         </div>

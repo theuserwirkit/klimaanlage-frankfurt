@@ -3,25 +3,25 @@ const steps = [
     number: "01",
     title: "Anfrage stellen",
     description:
-      "Teilen Sie uns Einsatzort, Zeitraum und Anzahl der benötigten Geräte mit. Wir prüfen die Verfügbarkeit.",
+      "Teilen Sie uns Gerätetyp (Anhänger oder Spotcooler), Einsatzort, Zeitraum und Anzahl mit. Wir prüfen die Verfügbarkeit in Wehrheim.",
   },
   {
     number: "02",
     title: "Anlieferung & Aufbau",
     description:
-      "Wir bringen die Anlage auf Anhänger zu Ihnen, positionieren sie und führen den Klimaschlauch ins Gebäude.",
+      "Wir liefern aus 61273 Wehrheim bei Frankfurt zu Ihnen — Anhänger-Klimaanlage oder Spotcooler inklusive Schlauch-Anschluss und Positionierung.",
   },
   {
     number: "03",
     title: "Betrieb",
     description:
-      "Die Anlage läuft während der Mietdauer. Ein Schutzkontaktstecker (220–240 V, 12 A) und Zugang zum Gebäude werden benötigt.",
+      "Das Gerät läuft während der Mietdauer. Benötigt wird ein Schutzkontaktstecker (220–240 V) und Zugang zum Einsatzort.",
   },
   {
     number: "04",
     title: "Abholung",
     description:
-      "Nach Ablauf der Mietzeit holen wir die Anlage ab. Kein Rückbau, keine baulichen Spuren.",
+      "Nach Ablauf der Mietzeit holen wir das Gerät ab. Kein Rückbau, keine baulichen Spuren — einfach und unkompliziert.",
   },
 ];
 
@@ -30,9 +30,12 @@ export default function HowItWorks() {
     <section id="ablauf" className="section-padding frost-bg">
       <div className="container-max">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="section-heading text-slate-900">So funktioniert&apos;s</h2>
+          <h2 className="section-heading text-slate-900">
+            So mieten Sie Klimaanlage oder Spotcooler
+          </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Von der Anfrage bis zur Abholung — in vier einfachen Schritten.
+            Von der Anfrage bis zur Abholung — in vier Schritten. Lieferung aus Wehrheim in
+            Frankfurt und die gesamte Rhein-Main-Region.
           </p>
         </div>
 

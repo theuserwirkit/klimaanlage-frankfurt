@@ -23,7 +23,7 @@ export default function DatenschutzPage() {
           <section>
             <h2 className="text-xl font-semibold text-slate-900">1. Verantwortlicher</h2>
             <p>
-              Eventpanther GmbH
+              Wirkung live GmbH
               <br />
               Hildegard von Bingen Str. 1
               <br />
