@@ -17,6 +17,8 @@ export interface InquiryData {
   message?: string;
 }
 
+const FALLBACK_CONTACT_EMAIL = "bp@wirkung-group.de";
+
 function getResendClient() {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return null;
@@ -69,6 +71,20 @@ function buildConfirmationHtml(data: InquiryData): string {
   `;
 }
 
+function formatResendError(context: string, error: { message: string; name: string }) {
+  console.error(`Resend Fehler (${context}):`, error);
+
+  if (error.message.includes("verify a domain") || error.message.includes("is not verified")) {
+    return `E-Mail-Versand noch nicht freigeschaltet: Bei Resend muss die Absender-Domain verifiziert werden (resend.com/domains). Bitte schreiben Sie uns direkt an ${FALLBACK_CONTACT_EMAIL}.`;
+  }
+
+  if (error.message.includes("testing emails to your own email address")) {
+    return `E-Mail-Versand im Resend-Testmodus: Bitte Domain bei Resend verifizieren, damit Anfragen an ${FALLBACK_CONTACT_EMAIL} zugestellt werden können.`;
+  }
+
+  return `E-Mail konnte nicht gesendet werden (${error.message}). Bitte versuchen Sie es später erneut oder schreiben Sie uns direkt an ${FALLBACK_CONTACT_EMAIL}.`;
+}
+
 export async function sendInquiryEmails(
   data: InquiryData,
   product: Product,
@@ -80,12 +96,25 @@ export async function sendInquiryEmails(
     process.env.INQUIRY_EMAIL_FROM || "Klimaanlage Frankfurt <onboarding@resend.dev>";
 
   if (!resend || !toEmail) {
-    console.log("E-Mail-Versand nicht konfiguriert. Anfrage:", data);
-    return { success: true };
+    console.error("E-Mail-Versand nicht konfiguriert.", {
+      hasApiKey: Boolean(process.env.RESEND_API_KEY),
+      hasToEmail: Boolean(toEmail),
+      nodeEnv: process.env.NODE_ENV,
+    });
+
+    if (process.env.NODE_ENV === "development") {
+      console.log("Anfrage (Dev-Modus, kein Versand):", data);
+      return { success: true };
+    }
+
+    return {
+      success: false,
+      error: `E-Mail-Versand ist nicht eingerichtet. Bitte schreiben Sie uns direkt an ${FALLBACK_CONTACT_EMAIL}.`,
+    };
   }
 
   try {
-    await resend.emails.send({
+    const inquiryResult = await resend.emails.send({
       from: fromEmail,
       to: toEmail,
       replyTo: data.email,
@@ -93,19 +122,33 @@ export async function sendInquiryEmails(
       html: buildInquiryHtml(data, product, estimate),
     });
 
-    await resend.emails.send({
+    if (inquiryResult.error) {
+      return {
+        success: false,
+        error: formatResendError("Anfrage an Betreiber", inquiryResult.error),
+      };
+    }
+
+    const confirmationResult = await resend.emails.send({
       from: fromEmail,
       to: data.email,
       subject: "Ihre Anfrage bei Klimaanlage Frankfurt",
       html: buildConfirmationHtml(data),
     });
 
+    if (confirmationResult.error) {
+      console.error(
+        "Bestätigungsmail fehlgeschlagen, Anfrage-Mail wurde gesendet:",
+        confirmationResult.error
+      );
+    }
+
     return { success: true };
   } catch (error) {
     console.error("E-Mail-Versand fehlgeschlagen:", error);
     return {
       success: false,
-      error: "E-Mail konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+      error: `E-Mail konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder schreiben Sie uns direkt an ${FALLBACK_CONTACT_EMAIL}.`,
     };
   }
 }

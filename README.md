@@ -15,19 +15,28 @@ npm run dev
 
 Bearbeiten Sie [`data/inventory.json`](data/inventory.json) und deployen Sie neu.
 
-## E-Mail-Konfiguration
+## E-Mail-Konfiguration (Resend)
 
 1. Account bei [Resend](https://resend.com) erstellen
-2. Domain verifizieren
-3. `.env.local` anlegen (siehe `.env.example`):
+2. **Domain verifizieren** unter [resend.com/domains](https://resend.com/domains) — z. B. `wirkung-group.de` (DNS-Einträge setzen)
+3. API-Key erstellen
+4. In Vercel diese **drei** Variablen setzen:
 
 ```env
 RESEND_API_KEY=re_...
-INQUIRY_EMAIL_TO=info@ihre-domain.de
-INQUIRY_EMAIL_FROM=Klimaanlage Frankfurt <anfragen@ihre-domain.de>
+INQUIRY_EMAIL_TO=bp@wirkung-digital.de
+INQUIRY_EMAIL_FROM=Klimaanlage Frankfurt <anfragen@wirkung-group.de>
 ```
 
-Ohne Konfiguration werden Anfragen in der Server-Konsole geloggt (für lokale Tests).
+5. Nach Änderungen an Env-Variablen **neu deployen** (`vercel --prod`)
+
+**Wichtig:** Ohne verifizierte Domain versendet Resend nur Test-Mails an die Account-E-Mail (`bp@wirkung-digital.de`), nicht an `bp@wirkung-group.de`.
+
+Testversand lokal:
+
+```bash
+vercel env run --environment=production -- node scripts/test-email.mjs
+```
 
 ## Deployment (Vercel)
 
